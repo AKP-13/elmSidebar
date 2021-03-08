@@ -1,7 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap");
+
 .nav {
     height: 100vh;
     margin: 0;
     background-color: #1f232a;
-    width: 250px;
+    width: 80px;
     color: #deebe9;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.nav:hover {
+    width: 250px;
+    transition: 0.5s;
+    text-align: left;
+}
+
+.nav:hover .circle {
+    margin: 0;
+    transition: 0.5s;
+}
+
+.nav:hover .expandableName {
+    opacity: 100%;
+    position: fixed;
+    transition: 3s;
+    display: inline;
+}
+
+.navbar-brand {
+    color: white;
+    margin: 20px;
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Sulphur Point", sans-serif;
+}
+
+.flex-column a {
+    color: #deebe9;
+}
+
+.expandableName {
+    display: none;
+    opacity: 0;
+    position: absolute;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #deebe9;
+    text-align: center;
+    background: #3c4146;
+    margin: 0 auto;
+    transition: 2s;
 }
