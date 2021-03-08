@@ -1,6 +1,10 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import "../styles/navbar.css";
+import { Icon } from "@iconify/react";
+import bxsHome from "@iconify-icons/bx/bxs-home";
+import plusOutlined from "@iconify-icons/ant-design/plus-outlined";
+import settings28Filled from "@iconify-icons/fluent/settings-28-filled";
 
 function NavBar() {
     return (
@@ -9,33 +13,34 @@ function NavBar() {
             className="nav flex-column"
             // aria-orientation="vertical"
         >
-            <Navbar.Brand>elm</Navbar.Brand>{" "}
+            <Navbar.Brand>e</Navbar.Brand>{" "}
             <Nav.Link eventKey="link-1" href="/overview">
-                Overview
+                <Icon icon={bxsHome} />{" "}
+                <span className="expandableName">- Overview</span>
             </Nav.Link>
             <Nav.Link eventKey="link-2" href="/asda">
-                Asda
+                <div className="circle">As</div>
             </Nav.Link>
             <Nav.Link eventKey="link-2" href="/bp">
-                BP
+                <div className="circle">Bp</div>
             </Nav.Link>
             <Nav.Link eventKey="link-2" href="/morrisons">
-                Morrisons
+                <div className="circle">Mo</div>
             </Nav.Link>
             <Nav.Link eventKey="link-2" href="/sainsburys">
-                Sainsbury's
+                <div className="circle">Sa</div>
             </Nav.Link>
             <Nav.Link eventKey="link-2" href="/tesco">
-                Tesco
+                <div className="circle">Te</div>
             </Nav.Link>
             <Nav.Link eventKey="link-2" href="/waitrose">
-                Waitrose
+                <div className="circle">Wa</div>
             </Nav.Link>
             <Nav.Link eventKey="link-2" href="/addDataConnection">
-                Add Data Connection
+                <Icon icon={plusOutlined} />
             </Nav.Link>
             <Nav.Link eventKey="link-2" href="/settings">
-                Settings
+                <Icon icon={settings28Filled} />
             </Nav.Link>
         </Nav>
     );
