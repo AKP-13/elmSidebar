@@ -8,10 +8,12 @@
     color: #deebe9;
     text-align: left;
     transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav a {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     align-self: center;
 }
 
@@ -19,6 +21,7 @@
     width: 250px;
     transition: 0.4s;
     text-align: left;
+    align-content: flex-start;
 }
 
 .navbar-brand {
@@ -27,6 +30,12 @@
     text-align: center;
     font-size: 3rem;
     font-family: "Sulphur Point", sans-serif;
+}
+
+#clientLinks a,
+#settingsLink a {
+    display: block;
+    text-align: center;
 }
 
 .nav .activeLink {
@@ -46,7 +55,7 @@
     color: #deebe9;
     text-align: center;
     background: #3c4146;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .activeLink .circle {

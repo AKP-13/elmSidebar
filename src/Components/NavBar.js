@@ -30,77 +30,122 @@ class NavBar extends Component {
                     this.state.showNav ? " navExpand" : ""
                 }`}
             >
-                <Navbar.Brand>e</Navbar.Brand>{" "}
-                <NavLink
-                    to="/overview"
-                    activeClassName="activeLink"
-                    // activeStyle={{
-                    //     fontWeight: "bold",
-                    //     color: "red",
-                    // }}
-                >
-                    <Icon onMouseEnter={this.showNav} icon={bxsHome} />
-                </NavLink>
-                <NavLink to="/asda" activeClassName="activeLink">
-                    {this.state.showNav ? (
-                        <Icon onMouseEnter={this.showNav} icon={tagIcon} />
-                    ) : (
-                        <div onMouseEnter={this.showNav} className="circle">
-                            As
-                        </div>
-                    )}
-                </NavLink>
-                <NavLink to="/bp" activeClassName="activeLink">
-                    {this.state.showNav ? (
-                        <Icon onMouseEnter={this.showNav} icon={tagIcon} />
-                    ) : (
-                        <div onMouseEnter={this.showNav} className="circle">
-                            Bp
-                        </div>
-                    )}
-                </NavLink>
-                <NavLink to="/morrisons" activeClassName="activeLink">
-                    {this.state.showNav ? (
-                        <Icon onMouseEnter={this.showNav} icon={tagIcon} />
-                    ) : (
-                        <div onMouseEnter={this.showNav} className="circle">
-                            Mo
-                        </div>
-                    )}
-                </NavLink>
-                <NavLink to="/sainsburys" activeClassName="activeLink">
-                    {this.state.showNav ? (
-                        <Icon onMouseEnter={this.showNav} icon={tagIcon} />
-                    ) : (
-                        <div onMouseEnter={this.showNav} className="circle">
-                            Sa
-                        </div>
-                    )}
-                </NavLink>
-                <NavLink to="/tesco" activeClassName="activeLink">
-                    {this.state.showNav ? (
-                        <Icon onMouseEnter={this.showNav} icon={tagIcon} />
-                    ) : (
-                        <div onMouseEnter={this.showNav} className="circle">
-                            Te
-                        </div>
-                    )}
-                </NavLink>
-                <NavLink to="/waitrose" activeClassName="activeLink">
-                    {this.state.showNav ? (
-                        <Icon onMouseEnter={this.showNav} icon={tagIcon} />
-                    ) : (
-                        <div onMouseEnter={this.showNav} className="circle">
-                            Wa
-                        </div>
-                    )}
-                </NavLink>
-                <NavLink to="/addDataConnection">
-                    <Icon onMouseEnter={this.showNav} icon={plusOutlined} />
-                </NavLink>
-                <NavLink to="/settings" activeClassName="activeLink">
-                    <Icon onMouseEnter={this.showNav} icon={settings28Filled} />
-                </NavLink>
+                <div id="clientLinks">
+                    <Navbar.Brand>e</Navbar.Brand>{" "}
+                    <NavLink to="/overview" activeClassName="activeLink">
+                        <Icon onMouseEnter={this.showNav} icon={bxsHome} />{" "}
+                        {this.state.showNav ? <span>Overview</span> : ""}
+                    </NavLink>
+                    <NavLink to="/asda" activeClassName="activeLink">
+                        {this.state.showNav ? (
+                            <span>
+                                <Icon
+                                    onMouseEnter={this.showNav}
+                                    icon={tagIcon}
+                                />{" "}
+                                Asda
+                            </span>
+                        ) : (
+                            <div onMouseEnter={this.showNav} className="circle">
+                                As
+                            </div>
+                        )}
+                    </NavLink>
+                    <NavLink to="/bp" activeClassName="activeLink">
+                        {this.state.showNav ? (
+                            <span>
+                                <Icon
+                                    onMouseEnter={this.showNav}
+                                    icon={tagIcon}
+                                />{" "}
+                                BP
+                            </span>
+                        ) : (
+                            <div onMouseEnter={this.showNav} className="circle">
+                                BP
+                            </div>
+                        )}
+                    </NavLink>
+                    <NavLink to="/morrisons" activeClassName="activeLink">
+                        {this.state.showNav ? (
+                            <span>
+                                <Icon
+                                    onMouseEnter={this.showNav}
+                                    icon={tagIcon}
+                                />{" "}
+                                Morrisons
+                            </span>
+                        ) : (
+                            <div onMouseEnter={this.showNav} className="circle">
+                                Mo
+                            </div>
+                        )}
+                    </NavLink>
+                    <NavLink to="/sainsburys" activeClassName="activeLink">
+                        {this.state.showNav ? (
+                            <span>
+                                <Icon
+                                    onMouseEnter={this.showNav}
+                                    icon={tagIcon}
+                                />{" "}
+                                Sainsbury's
+                            </span>
+                        ) : (
+                            <div onMouseEnter={this.showNav} className="circle">
+                                Sa
+                            </div>
+                        )}
+                    </NavLink>
+                    <NavLink to="/tesco" activeClassName="activeLink">
+                        {this.state.showNav ? (
+                            <span>
+                                <Icon
+                                    onMouseEnter={this.showNav}
+                                    icon={tagIcon}
+                                />{" "}
+                                Tesco
+                            </span>
+                        ) : (
+                            <div onMouseEnter={this.showNav} className="circle">
+                                Te
+                            </div>
+                        )}
+                    </NavLink>
+                    <NavLink to="/waitrose" activeClassName="activeLink">
+                        {this.state.showNav ? (
+                            <span>
+                                <Icon
+                                    onMouseEnter={this.showNav}
+                                    icon={tagIcon}
+                                />{" "}
+                                Waitrose
+                            </span>
+                        ) : (
+                            <div onMouseEnter={this.showNav} className="circle">
+                                Wa
+                            </div>
+                        )}
+                    </NavLink>
+                    <NavLink
+                        to="/addDataConnection"
+                        activeClassName="activeLink"
+                    >
+                        <Icon onMouseEnter={this.showNav} icon={plusOutlined} />{" "}
+                        {this.state.showNav ? (
+                            <span>Add Data Connection</span>
+                        ) : (
+                            ""
+                        )}
+                    </NavLink>
+                </div>
+                <div id="settingsLink">
+                    <NavLink to="/settings" activeClassName="activeLink">
+                        <Icon
+                            onMouseEnter={this.showNav}
+                            icon={settings28Filled}
+                        />
+                    </NavLink>
+                </div>
             </Nav>
         );
     }
