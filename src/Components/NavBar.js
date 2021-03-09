@@ -15,6 +15,7 @@ class NavBar extends Component {
         showNav: false,
     };
 
+    // Two different functions rather than a toggle for more control on when to call each one
     showNav = () => {
         this.setState({ showNav: true });
     };
@@ -31,26 +32,24 @@ class NavBar extends Component {
                     this.state.showNav ? " navExpand" : ""
                 }`}
             >
+                {/* ELM LOGO DOWN TO SETTINGS LINK */}
                 <div id="clientLinks">
-                    <Navbar.Brand>e</Navbar.Brand>{" "}
+                    <Navbar.Brand id={this.state.showNav ? "testing" : ""}>
+                        {this.state.showNav ? "elm" : "e"}
+                    </Navbar.Brand>
+
+                    {/* DROPDOWN MENU */}
                     <NavDropdown
                         onMouseEnter={this.showNav}
                         rootCloseEvent="mousedown"
                         title={
                             this.state.showNav ? (
                                 <span>
-                                    <Icon
-                                        // onMouseEnter={this.showNav}
-                                        icon={bxsHome}
-                                    />{" "}
-                                    Overview
+                                    <Icon icon={bxsHome} /> Overview
                                 </span>
                             ) : (
                                 <span>
-                                    <Icon
-                                        // onMouseEnter={this.showNav}
-                                        icon={bxsHome}
-                                    />
+                                    <Icon icon={bxsHome} />
                                 </span>
                             )
                         }
@@ -70,6 +69,8 @@ class NavBar extends Component {
                             {this.state.showNav ? <span>Discounts</span> : ""}
                         </NavLink>
                     </NavDropdown>
+
+                    {/* ASDA */}
                     <NavLink to="/asda" activeClassName="activeLink">
                         {this.state.showNav ? (
                             <span>
@@ -85,6 +86,8 @@ class NavBar extends Component {
                             </div>
                         )}
                     </NavLink>
+
+                    {/* BP */}
                     <NavLink to="/bp" activeClassName="activeLink">
                         {this.state.showNav ? (
                             <span>
@@ -100,6 +103,8 @@ class NavBar extends Component {
                             </div>
                         )}
                     </NavLink>
+
+                    {/* MORRISONS */}
                     <NavLink to="/morrisons" activeClassName="activeLink">
                         {this.state.showNav ? (
                             <span>
@@ -115,6 +120,8 @@ class NavBar extends Component {
                             </div>
                         )}
                     </NavLink>
+
+                    {/* SAINSBURY'S */}
                     <NavLink to="/sainsburys" activeClassName="activeLink">
                         {this.state.showNav ? (
                             <span>
@@ -130,6 +137,8 @@ class NavBar extends Component {
                             </div>
                         )}
                     </NavLink>
+
+                    {/* TESCO */}
                     <NavLink to="/tesco" activeClassName="activeLink">
                         {this.state.showNav ? (
                             <span>
@@ -145,6 +154,8 @@ class NavBar extends Component {
                             </div>
                         )}
                     </NavLink>
+
+                    {/* WAITROSE */}
                     <NavLink to="/waitrose" activeClassName="activeLink">
                         {this.state.showNav ? (
                             <span>
@@ -160,6 +171,8 @@ class NavBar extends Component {
                             </div>
                         )}
                     </NavLink>
+
+                    {/* ADD DATA CONNECTION */}
                     <NavLink
                         to="/addDataConnection"
                         activeClassName="activeLink"
@@ -172,6 +185,8 @@ class NavBar extends Component {
                         )}
                     </NavLink>
                 </div>
+
+                {/* SETTINGS LINK */}
                 <div id="settingsLink">
                     <NavLink to="/settings" activeClassName="activeLink">
                         <Icon
