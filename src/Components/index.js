@@ -1,4 +1,5 @@
 export { default as NavBar } from "./NavBar";
+export { default as TopBar } from "./TopBar";
 export { default as Overview } from "./Overview";
 export { default as Asda } from "./Asda";
 export { default as BP } from "./BP";

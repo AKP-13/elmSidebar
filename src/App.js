@@ -1,6 +1,7 @@
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import {
     NavBar,
+    TopBar,
     Overview,
     Asda,
     BP,
@@ -17,20 +18,26 @@ function App() {
     return (
         <div className="App">
             <NavBar />
-            <Switch>
-                <Route exact path="/overview" component={Overview} />
-                <Route path="/asda" component={Asda} />
-                <Route path="/bp" component={BP} />
-                <Route path="/morrisons" component={Morrisons} />
-                <Route path="/tesco" component={Tesco} />
-                <Route path="/sainsburys" component={Sainsburys} />
-                <Route path="/waitrose" component={Waitrose} />
-                <Route
-                    path="/addDataConnection"
-                    component={AddDataConnection}
-                />
-                <Route path="/settings" component={Settings} />
-            </Switch>
+            <div id="content">
+                <TopBar />
+                <Switch>
+                    <Route exact path="/">
+                        <Redirect to="/overview" />
+                    </Route>
+                    <Route path="/overview" component={Overview} />
+                    <Route path="/asda" component={Asda} />
+                    <Route path="/bp" component={BP} />
+                    <Route path="/morrisons" component={Morrisons} />
+                    <Route path="/tesco" component={Tesco} />
+                    <Route path="/sainsburys" component={Sainsburys} />
+                    <Route path="/waitrose" component={Waitrose} />
+                    <Route
+                        path="/addDataConnection"
+                        component={AddDataConnection}
+                    />
+                    <Route path="/settings" component={Settings} />
+                </Switch>
+            </div>
         </div>
     );
 }
