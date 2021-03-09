@@ -31,14 +31,7 @@ class NavBar extends Component {
                 }`}
             >
                 <Navbar.Brand>e</Navbar.Brand>{" "}
-                <NavLink
-                    to="/overview"
-                    activeClassName="activeLink"
-                    // activeStyle={{
-                    //     fontWeight: "bold",
-                    //     color: "red",
-                    // }}
-                >
+                <NavLink to="/overview" activeClassName="activeLink">
                     <Icon onMouseEnter={this.showNav} icon={bxsHome} />
                 </NavLink>
                 <NavLink to="/asda" activeClassName="activeLink">
