@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import "../styles/navbar.css";
 import { Icon } from "@iconify/react";
 import bxsHome from "@iconify-icons/bx/bxs-home";
@@ -32,10 +33,43 @@ class NavBar extends Component {
             >
                 <div id="clientLinks">
                     <Navbar.Brand>e</Navbar.Brand>{" "}
-                    <NavLink to="/overview" activeClassName="activeLink">
-                        <Icon onMouseEnter={this.showNav} icon={bxsHome} />{" "}
-                        {this.state.showNav ? <span>Overview</span> : ""}
-                    </NavLink>
+                    <NavDropdown
+                        onMouseEnter={this.showNav}
+                        rootCloseEvent="mousedown"
+                        title={
+                            this.state.showNav ? (
+                                <span>
+                                    <Icon
+                                        // onMouseEnter={this.showNav}
+                                        icon={bxsHome}
+                                    />{" "}
+                                    Overview
+                                </span>
+                            ) : (
+                                <span>
+                                    <Icon
+                                        // onMouseEnter={this.showNav}
+                                        icon={bxsHome}
+                                    />
+                                </span>
+                            )
+                        }
+                        id="nav-dropdown"
+                    >
+                        <NavLink to="/overview" activeClassName="activeLink">
+                            {this.state.showNav ? <span>Overview</span> : ""}
+                        </NavLink>
+                        <NavLink to="/overview" activeClassName="activeLink">
+                            {this.state.showNav ? (
+                                <span>Rate of Sale</span>
+                            ) : (
+                                ""
+                            )}
+                        </NavLink>
+                        <NavLink to="/overview" activeClassName="activeLink">
+                            {this.state.showNav ? <span>Discounts</span> : ""}
+                        </NavLink>
+                    </NavDropdown>
                     <NavLink to="/asda" activeClassName="activeLink">
                         {this.state.showNav ? (
                             <span>
