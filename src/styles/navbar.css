@@ -6,26 +6,19 @@
     background-color: #1f232a;
     width: 80px;
     color: #deebe9;
-    text-align: center;
-    transition: 0.5s;
-}
-
-.nav:hover {
-    width: 250px;
-    transition: 0.5s;
     text-align: left;
+    transition: 0.4s;
 }
 
-.nav:hover .circle {
-    margin: 0;
-    transition: 0.5s;
+.nav a {
+    font-size: 1.8rem;
+    align-self: center;
 }
 
-.nav:hover .expandableName {
-    opacity: 100%;
-    position: fixed;
-    transition: 3s;
-    display: inline;
+.navExpand {
+    width: 250px;
+    transition: 0.4s;
+    text-align: left;
 }
 
 .navbar-brand {
@@ -36,14 +29,12 @@
     font-family: "Sulphur Point", sans-serif;
 }
 
-.flex-column a {
-    color: #deebe9;
+.nav .activeLink {
+    color: #1fb297;
 }
 
-.expandableName {
-    display: none;
-    opacity: 0;
-    position: absolute;
+.flex-column a {
+    color: #deebe9;
 }
 
 .circle {
@@ -55,6 +46,9 @@
     color: #deebe9;
     text-align: center;
     background: #3c4146;
-    margin: 0 auto;
-    transition: 2s;
+    margin: 0;
+}
+
+.activeLink .circle {
+    background: #1fb297;
 }
