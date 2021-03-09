@@ -1,5 +1,5 @@
 function Tesco() {
-    return <h1>Tesco Conent Goes here</h1>;
+    return <h1>Tesco Dashboard</h1>;
 }
 
 export default Tesco;

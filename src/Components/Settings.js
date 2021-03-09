@@ -1,5 +1,5 @@
 function Settings() {
-    return <h1>Settings Conent Goes here</h1>;
+    return <h1>Product Settings</h1>;
 }
 
 export default Settings;

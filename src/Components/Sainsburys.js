@@ -1,5 +1,5 @@
 function Sainsburys() {
-    return <h1>Sainsbury's Conent Goes here</h1>;
+    return <h1>Sainsbury's Dashboard</h1>;
 }
 
 export default Sainsburys;
