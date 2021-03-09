@@ -15,7 +15,7 @@
 ## Technologies
 
 -   React
--   Bootsrtap
+-   Bootstrap
 -   iconify
 
 ## Future Features
@@ -27,7 +27,7 @@
     -   I had the idea to have them there constantly but with no opacity and then fade them into view upon the sidebar's expansion but I wanted to find a way that was a bit neater and didn't result in unused but still rendered content
 
 -   Spin the settings logo upon sidebar expansion
--   Only highlight the tag icon as opposed to the longer text / shop name when you've clicked on that link
+-   Only highlight the tag icon green as opposed to the longer text / shop name when you've clicked on that link
 
 #### Dropdowns
 
@@ -46,7 +46,7 @@
 
 #### Testing
 
--   Implememnt testing
+-   Implement testing
 
 #### Mobile Responsiveness
 
