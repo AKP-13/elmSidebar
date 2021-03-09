@@ -32,7 +32,9 @@ class NavBar extends Component {
                 }`}
             >
                 <div id="clientLinks">
-                    <Navbar.Brand>e</Navbar.Brand>{" "}
+                    <Navbar.Brand id={this.state.showNav ? "testing" : ""}>
+                        {this.state.showNav ? "elm" : "e"}
+                    </Navbar.Brand>
                     <NavDropdown
                         onMouseEnter={this.showNav}
                         rootCloseEvent="mousedown"
