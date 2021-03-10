@@ -1,11 +1,6 @@
 export { default as NavBar } from "./NavBar";
 export { default as TopBar } from "./TopBar";
 export { default as Overview } from "./Overview";
-export { default as Asda } from "./Asda";
-export { default as BP } from "./BP";
-export { default as Morrisons } from "./Morrisons";
-export { default as Sainsburys } from "./Sainsburys";
-export { default as Tesco } from "./Tesco";
-export { default as Waitrose } from "./Waitrose";
 export { default as AddDataConnection } from "./AddDataConnection";
 export { default as Settings } from "./Settings";
+export { default as DynamicComponent } from "./DynamicComponent";
