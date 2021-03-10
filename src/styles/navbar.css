@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap");
 
-#testing {
+#center {
     margin: 20px auto;
     display: block;
 }
@@ -61,6 +61,10 @@
     text-align: center;
     background: #3c4146;
     margin: 0 auto;
+}
+
+span {
+    align-content: left;
 }
 
 .activeLink .circle {

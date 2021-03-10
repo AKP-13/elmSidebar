@@ -34,7 +34,7 @@ class NavBar extends Component {
             >
                 {/* ELM LOGO DOWN TO SETTINGS LINK */}
                 <div id="clientLinks">
-                    <Navbar.Brand id={this.state.showNav ? "testing" : ""}>
+                    <Navbar.Brand id={this.state.showNav ? "center" : ""}>
                         {this.state.showNav ? "elm" : "e"}
                     </Navbar.Brand>
 
