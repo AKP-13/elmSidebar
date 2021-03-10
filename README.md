@@ -39,10 +39,7 @@
 
 #### Code Refactor
 
--   I'd like to make the code more DRY and future-proof by making use of an array that I map over to render each client link
-    -   I will do this by having an array of client shop names and then mapping over each element
-        -   The `href` attribute for each subsequent `NavLink` would be `element.toLowerCase()` (removing any punctuation also)
-        -   The two letter abreviation in each circle could be achieved by `element.substring(0, 2)`
+-   I'd like to further improve the `arrayOfClients.map` functionality so that I can cater for nested objects and the non-client links in the sidebar
 
 #### Testing
 
