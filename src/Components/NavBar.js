@@ -10,6 +10,8 @@ import plusOutlined from "@iconify-icons/ant-design/plus-outlined";
 import settings28Filled from "@iconify-icons/fluent/settings-28-filled";
 import tagIcon from "@iconify-icons/fa-solid/tag";
 
+import { arrayOfClients } from "../data/clients";
+
 class NavBar extends Component {
     state = {
         showNav: false,
@@ -26,15 +28,16 @@ class NavBar extends Component {
 
     render() {
         return (
+            // Sidebar
             <Nav
                 onMouseLeave={this.hideNav}
                 className={`flex-column${
                     this.state.showNav ? " navExpand" : ""
                 }`}
             >
-                {/* ELM LOGO DOWN TO SETTINGS LINK */}
+                {/* ICONS FROM ELM LOGO DOWN TO ADD DATA CONNECTIONS LINK */}
                 <div id="clientLinks">
-                    <Navbar.Brand id={this.state.showNav ? "testing" : ""}>
+                    <Navbar.Brand id={this.state.showNav ? "center" : ""}>
                         {this.state.showNav ? "elm" : "e"}
                     </Navbar.Brand>
 
@@ -70,107 +73,33 @@ class NavBar extends Component {
                         </NavLink>
                     </NavDropdown>
 
-                    {/* ASDA */}
-                    <NavLink to="/asda" activeClassName="activeLink">
-                        {this.state.showNav ? (
-                            <span>
-                                <Icon
-                                    onMouseEnter={this.showNav}
-                                    icon={tagIcon}
-                                />{" "}
-                                Asda
-                            </span>
-                        ) : (
-                            <div onMouseEnter={this.showNav} className="circle">
-                                As
-                            </div>
-                        )}
-                    </NavLink>
-
-                    {/* BP */}
-                    <NavLink to="/bp" activeClassName="activeLink">
-                        {this.state.showNav ? (
-                            <span>
-                                <Icon
-                                    onMouseEnter={this.showNav}
-                                    icon={tagIcon}
-                                />{" "}
-                                BP
-                            </span>
-                        ) : (
-                            <div onMouseEnter={this.showNav} className="circle">
-                                BP
-                            </div>
-                        )}
-                    </NavLink>
-
-                    {/* MORRISONS */}
-                    <NavLink to="/morrisons" activeClassName="activeLink">
-                        {this.state.showNav ? (
-                            <span>
-                                <Icon
-                                    onMouseEnter={this.showNav}
-                                    icon={tagIcon}
-                                />{" "}
-                                Morrisons
-                            </span>
-                        ) : (
-                            <div onMouseEnter={this.showNav} className="circle">
-                                Mo
-                            </div>
-                        )}
-                    </NavLink>
-
-                    {/* SAINSBURY'S */}
-                    <NavLink to="/sainsburys" activeClassName="activeLink">
-                        {this.state.showNav ? (
-                            <span>
-                                <Icon
-                                    onMouseEnter={this.showNav}
-                                    icon={tagIcon}
-                                />{" "}
-                                Sainsbury's
-                            </span>
-                        ) : (
-                            <div onMouseEnter={this.showNav} className="circle">
-                                Sa
-                            </div>
-                        )}
-                    </NavLink>
-
-                    {/* TESCO */}
-                    <NavLink to="/tesco" activeClassName="activeLink">
-                        {this.state.showNav ? (
-                            <span>
-                                <Icon
-                                    onMouseEnter={this.showNav}
-                                    icon={tagIcon}
-                                />{" "}
-                                Tesco
-                            </span>
-                        ) : (
-                            <div onMouseEnter={this.showNav} className="circle">
-                                Te
-                            </div>
-                        )}
-                    </NavLink>
-
-                    {/* WAITROSE */}
-                    <NavLink to="/waitrose" activeClassName="activeLink">
-                        {this.state.showNav ? (
-                            <span>
-                                <Icon
-                                    onMouseEnter={this.showNav}
-                                    icon={tagIcon}
-                                />{" "}
-                                Waitrose
-                            </span>
-                        ) : (
-                            <div onMouseEnter={this.showNav} className="circle">
-                                Wa
-                            </div>
-                        )}
-                    </NavLink>
+                    {/* CLIENT LINKS */}
+                    {arrayOfClients.map((item, idx) => {
+                        return (
+                            <NavLink
+                                key={idx}
+                                to={`/${item.toLowerCase()}`}
+                                activeClassName="activeLink"
+                            >
+                                {this.state.showNav ? (
+                                    <span>
+                                        <Icon
+                                            onMouseEnter={this.showNav}
+                                            icon={tagIcon}
+                                        />{" "}
+                                        {`${item}`}
+                                    </span>
+                                ) : (
+                                    <div
+                                        onMouseEnter={this.showNav}
+                                        className="circle"
+                                    >
+                                        {`${item.substring(0, 2)}`}
+                                    </div>
+                                )}
+                            </NavLink>
+                        );
+                    })}
 
                     {/* ADD DATA CONNECTION */}
                     <NavLink
