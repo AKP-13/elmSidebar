@@ -1,18 +1,15 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import {
     NavBar,
+    DynamicComponent,
     TopBar,
     Overview,
-    Asda,
-    BP,
-    Morrisons,
-    Tesco,
-    Sainsburys,
-    Waitrose,
     AddDataConnection,
     Settings,
 } from "./Components";
 import "./App.css";
+
+import { arrayOfClients } from "./data/clients";
 
 function App() {
     return (
@@ -25,12 +22,20 @@ function App() {
                         <Redirect to="/overview" />
                     </Route>
                     <Route path="/overview" component={Overview} />
-                    <Route path="/asda" component={Asda} />
-                    <Route path="/bp" component={BP} />
-                    <Route path="/morrisons" component={Morrisons} />
-                    <Route path="/tesco" component={Tesco} />
-                    <Route path="/sainsburys" component={Sainsburys} />
-                    <Route path="/waitrose" component={Waitrose} />
+
+                    {/* CLIENT SHOP ROUTES */}
+                    {arrayOfClients.map((item, idx) => {
+                        return (
+                            <Route
+                                key={idx}
+                                path={`/${item.toLowerCase()}`}
+                                component={() => (
+                                    <DynamicComponent name={item} />
+                                )}
+                            />
+                        );
+                    })}
+
                     <Route
                         path="/addDataConnection"
                         component={AddDataConnection}
